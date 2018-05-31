@@ -1,0 +1,22 @@
+{
+  "published": true,
+  "name": "List Friendship",
+  "end_point": "api/v1/users/friendships/list",
+  "http_method": "POST",
+  "params": [],
+  "header": {"Content-Type": "application/json"},
+  "examples": [{
+    "request": {
+      "email": "john123@example.com"
+    },
+    "response": {
+      "success": true,
+      "firends": [
+        "johnny@example.com",
+        "johnny123@example.com",
+        "johnny456@example.com"
+      ],
+      "count": 3
+    }
+    }]
+  }

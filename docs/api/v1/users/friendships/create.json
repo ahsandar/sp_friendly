@@ -1,0 +1,28 @@
+{
+  "published": true,
+  "name": "Create Friendships",
+  "end_point": "api/v1/users/friendships",
+  "http_method": "POST",
+  "params": [
+    {
+      "key": "friends",
+      "required": true,
+      "type": "Array",
+      "description": "Email ID array with 2 email IDs",
+      "validations": ["Should be 2 valid email address"]
+    }
+  ],
+  "header": {"Content-Type": "application/json"},
+  "examples": [{
+    "request": {
+      "friends":
+      [
+        "john123@example.com",
+        "johnny456@example.com"
+      ]
+    },
+    "response": {
+      "success": true
+    }
+    }]
+  }

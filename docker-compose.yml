@@ -1,0 +1,38 @@
+# service configuration for our database
+version: '3.6'
+
+services:
+  db:
+
+    # use the preferred version of the official Postgres image
+    # see https://hub.docker.com/_/postgres/
+    image: postgres:10.4
+
+    # persist the database between containers by storing it in a volume
+    volumes:
+      - db-postgres:/var/lib/postgresql/data
+
+  # service configuration for our dockerized Rails app
+  app:
+
+    # use the Dockerfile next to this file
+    build: .
+
+    # rely on the RAILS_ENV value of the host machine
+    environment:
+      - RAILS_ENV=development
+
+    # makes the app container aware of the DB container
+    links:
+      - db
+
+    # expose the port we configured Puma to bind to
+    ports:
+      - "3000:3000"
+
+      # map our application source code, in full, to the application root of our container
+    # volumes:
+    #   - $PWD:/var/app/sp_friendly
+
+volumes:
+  db-postgres:

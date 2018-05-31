@@ -1,0 +1,37 @@
+{
+  "published": true,
+  "name": "List Subscription",
+  "end_point": "api/v1/users/subscriptions/list",
+  "http_method": "POST",
+  "params": [
+    {
+      "key": "sender",
+      "required": true,
+      "type": "String",
+      "description": "Email ID for which updates are to be sent",
+      "validations": ["Should be valid email address"]
+    },
+    {
+      "key": "text",
+      "required": true,
+      "type": "String",
+      "description": "Text update",
+      "validations": ["Should be valid text"]
+    }
+  ],
+  "header": {"Content-Type": "application/json"},
+  "examples": [{
+    "request": {
+      "sender": "andy@example.com",
+      "text": "ahsan@live.com Hello World! kate@example.com"
+    },
+    "response": {
+      "success": true,
+      "recipients": [
+        "common@example.com",
+        "ahsan@live.com",
+        "kate@example.com"
+      ]
+    }
+    }]
+  }

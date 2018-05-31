@@ -1,0 +1,25 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  port: 5432
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  port: 5432
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  database: sp_friendly_dev
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  port: 5432
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  database: sp_friendly_test

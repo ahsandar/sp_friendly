@@ -1,0 +1,30 @@
+{
+  "published": true,
+  "name": "Create Subscriptions",
+  "end_point": "api/v1/users/subscription",
+  "http_method": "POST",
+  "params": [  {
+    "key": "requestor",
+    "required": true,
+    "type": "String",
+    "description": "Email ID requesting to subscribe",
+    "validations": ["Should be valid email address"]
+  },
+  {
+    "key": "target",
+    "required": true,
+    "type": "String",
+    "description": "Email ID requested to subscribe too",
+    "validations": ["Should be valid email address"]
+    }],
+    "header": {"Content-Type": "application/json"},
+    "examples": [{
+      "request": {
+        "requestor": "andy123@example.com",
+        "target": "john@example.com"
+      },
+      "response": {
+        "success": true
+      }
+      }]
+    }

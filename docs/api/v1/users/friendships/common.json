@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "name": "List Common Friends",
+  "end_point": "api/v1/users/friendships/common",
+  "http_method": "POST",
+  "params": [
+    {
+      "key": "friends",
+      "required": true,
+      "type": "Array",
+      "description": "Email ID array with 2 email IDs",
+      "validations": ["Should be 2 valid email address"]
+    }
+  ],
+  "header": {"Content-Type": "application/json"},
+  "examples": [{
+    "request": {
+      "friends":
+      [
+        "johnny@example.com",
+        "johnny123@example.com"
+      ]
+    },
+    "response": {
+      "success": true,
+      "firends": [
+        "john123@example.com"
+      ],
+      "count": 1
+    }
+    }]
+  }
