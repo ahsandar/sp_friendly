@@ -55,5 +55,3 @@ docker-compose up
   *User story 6: Subscription List*
   ![](docs/user_story_6.png)
 
-
-  *for obvious reason I can not have commit history as this (personal) account is used for other organisations also
