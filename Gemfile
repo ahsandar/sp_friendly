@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use Puma as the app server
@@ -27,7 +27,7 @@ gem 'puma', '~> 3.11'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
-gem 'apidoco'
+gem 'apidoco', '>= 1.5.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -37,7 +37,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry'
   gem 'rb-readline'
-  gem 'seed_dump'
+  gem 'seed_dump', '>= 3.3.1'
 end
 
 
