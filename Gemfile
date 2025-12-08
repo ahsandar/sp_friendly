@@ -37,7 +37,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry'
   gem 'rb-readline'
-  gem 'seed_dump'
+  gem 'seed_dump', '>= 3.4.0'
 end
 
 
